@@ -1,13 +1,36 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerStartup : MonoBehaviour
+public class PlayerStartup : NetworkBehaviour
 {
     [SerializeField]
     private Behaviour[] compentDisable;
 
+    private Camera sceneCamera;
     private void Start()
     {
-        throw new NotImplementedException();
+        if (!isLocalPlayer)
+        {
+            for (int i = 0; i < compentDisable.Length; i++)
+            {
+                compentDisable[i].enabled = false;
+            }
+        }
+        else
+        {
+            sceneCamera = Camera.main;
+            if (sceneCamera != null)
+            {
+                sceneCamera.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (sceneCamera != null)
+        {
+            sceneCamera.gameObject.SetActive(true);
+        }
     }
 }

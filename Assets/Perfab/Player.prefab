@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2970123781346390478}
   - component: {fileID: 2970123781346390479}
   - component: {fileID: 1022121264108640962}
-  - component: {fileID: -8218589231674511868}
+  - component: {fileID: 3908794181497651973}
+  - component: {fileID: 840137502032801320}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -93,8 +94,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492e2bdc00b0da04c9b6fadef424d25b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compentDisable: []
---- !u!114 &-8218589231674511868
+  compentDisable:
+  - {fileID: 2970123781346390478}
+  - {fileID: 2970123781346390479}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &3908794181497651973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,13 +108,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 2968279638429996872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &840137502032801320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2968279638429996872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d6c522af31447398568cc65334232b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 0
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!1 &2968462838716557976
 GameObject:
   m_ObjectHideFlags: 0

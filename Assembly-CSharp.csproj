@@ -61,10 +61,6 @@
      <Compile Include="Assets\Scripts\PlayerContrller.cs" />
      <Compile Include="Assets\Scripts\PlayerMotor.cs" />
      <Compile Include="Assets\Scripts\PlayerStartup.cs" />
-     <None Include="Assets\Mirror\Version.txt" />
-     <None Include="Assets\Mirror\Readme.txt" />
-     <None Include="Assets\Mirror\Notice.txt" />
-     <None Include="Assets\Mirror\Plugins\Mono.Cecil\License.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>A:/Project/YoutubeTry/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -91,6 +87,15 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>A:/Project/YoutubeTry/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Editor">
+ <HintPath>A:/Project/YoutubeTry/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-weaver.Editor">
+ <HintPath>A:/Project/YoutubeTry/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+ <HintPath>A:/Project/YoutubeTry/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>A:/UnityLib/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -268,18 +273,6 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>A:/UnityLib/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
- </Reference>
- <Reference Include="Mono.CecilX">
- <HintPath>A:/Project/YoutubeTry/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
- </Reference>
- <Reference Include="Mono.CecilX.Mdb">
- <HintPath>A:/Project/YoutubeTry/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
- </Reference>
- <Reference Include="Mono.CecilX.Pdb">
- <HintPath>A:/Project/YoutubeTry/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
- </Reference>
- <Reference Include="Mono.CecilX.Rocks">
- <HintPath>A:/Project/YoutubeTry/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>A:/UnityLib/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -626,64 +619,6 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>A:/UnityLib/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Mirror.Weaver.csproj">
-      <Project>{C2DFD4C4-87A7-6262-D4D7-19EC9C8A8478}</Project>
-      <Name>Mirror.Weaver</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Authenticators.csproj">
-      <Project>{8001CE20-0DA6-32EA-A4B9-A75C3ED74616}</Project>
-      <Name>Mirror.Authenticators</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{84D72E7B-6AEB-716E-2C32-2C4118FA2734}</Project>
-      <Name>Mirror.Components</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{61AFCBDB-71C7-F4CB-66EA-721D76EE5528}</Project>
-      <Name>Mirror.Examples</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.CompilerSymbols.csproj">
-      <Project>{2FD932DD-F578-76C0-53DD-DD115A6A0E9D}</Project>
-      <Name>Mirror.CompilerSymbols</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Cloud.csproj">
-      <Project>{E21B491B-5E8E-5859-2C9A-197434C34410}</Project>
-      <Name>Mirror.Cloud</Name>
-    </ProjectReference>
-    <ProjectReference Include="Telepathy.csproj">
-      <Project>{DFC04884-0F2F-B385-4A06-3515D449EDC0}</Project>
-      <Name>Telepathy</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.Pong.csproj">
-      <Project>{1FE58D6C-3A93-8F1A-BF44-0B1143DF2F1D}</Project>
-      <Name>Mirror.Examples.Cloud.Pong</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.csproj">
-      <Project>{FC941CA1-E7AD-F97E-E190-0FC721566DB0}</Project>
-      <Name>Mirror</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.example.RigidbodyPhysics.csproj">
-      <Project>{CE90DF73-792D-0678-0BA8-F5CB780CDB24}</Project>
-      <Name>Mirror.example.RigidbodyPhysics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Editor.csproj">
-      <Project>{A207CB10-CCC8-E64D-0255-3FB884534E40}</Project>
-      <Name>Mirror.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="kcp2k.csproj">
-      <Project>{B57F1943-0256-50C6-E537-4771B4A52477}</Project>
-      <Name>kcp2k</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.GUI.csproj">
-      <Project>{983B5171-883A-F937-66F8-ECF5D0F69723}</Project>
-      <Name>Mirror.Examples.Cloud.GUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="SimpleWebTransport.csproj">
-      <Project>{30A5D853-E23B-F8BA-E2E7-5A7AE5827BD3}</Project>
-      <Name>SimpleWebTransport</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
