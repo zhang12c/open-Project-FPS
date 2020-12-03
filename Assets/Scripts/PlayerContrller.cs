@@ -8,6 +8,13 @@ public class PlayerContrller : MonoBehaviour
 
     [SerializeField] private float rotationSpeed = 3f;
 
+    [SerializeField] private float jumpForce = 1000f;
+
+    [Header("ConfigurableJoint Settings")] 
+    [SerializeField] private JointDriveMode jointMode = JointDriveMode.None;
+    [SerializeField] private float maximumForce = 40f;
+    [SerializeField] private float jointSprint = 20f;
+    
     private PlayerMotor motor;
     private void Start()
     {
@@ -45,10 +52,15 @@ public class PlayerContrller : MonoBehaviour
     // 水平旋转的量
     Vector3 _cameraRotation = new  Vector3(-_xRot,0f,0f) * rotationSpeed;
     
-    
-    
     // 调用Rotation方法
     motor.CameraRotate(_cameraRotation);
-    
+
+    Vector3 _jumpDir = Vector3.zero;
+
+    if (Input.GetButton("Jump"))
+    {
+        _jumpDir = Vector3.up * jumpForce;
+    }
+    motor.Jump(_jumpDir);
     }
 }

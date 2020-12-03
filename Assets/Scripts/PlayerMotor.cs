@@ -60,8 +60,12 @@ public class PlayerMotor : MonoBehaviour
         {
             rb.MovePosition(rb.position + velocity * Time.deltaTime);
         }
+        rb.AddForce(jumpDir * Time.deltaTime );
     }
 
-
-    
+    Vector3 jumpDir = Vector3.zero;
+    public void Jump(Vector3 _jumpDir)
+    {
+        jumpDir = _jumpDir;
+    }
 }
