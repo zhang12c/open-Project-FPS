@@ -3,22 +3,26 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerContrller : MonoBehaviour
 {
+    private PlayerMotor motor;
+    private ConfigurableJoint joint;
     [SerializeField] 
     private float moveSpeed = 5f;
 
     [SerializeField] private float rotationSpeed = 3f;
 
-    [SerializeField] private float jumpForce = 1000f;
+    [SerializeField] private float jumpForce = 1500f;
 
     [Header("ConfigurableJoint Settings")] 
-    [SerializeField] private JointDriveMode jointMode = JointDriveMode.None;
+    [SerializeField] private JointDriveMode jointMode = JointDriveMode.Position;
     [SerializeField] private float maximumForce = 40f;
     [SerializeField] private float jointSprint = 20f;
     
-    private PlayerMotor motor;
+    
     private void Start()
     {
         motor = GetComponent<PlayerMotor>();
+        joint = GetComponent<ConfigurableJoint>();
+        SetJointSettings(jointSprint);
     }
 
     private void Update()
@@ -50,7 +54,7 @@ public class PlayerContrller : MonoBehaviour
     float _xRot = Input.GetAxis("Mouse Y");
     
     // 水平旋转的量
-    Vector3 _cameraRotation = new  Vector3(-_xRot,0f,0f) * rotationSpeed;
+    float _cameraRotation = _xRot * rotationSpeed;
     
     // 调用Rotation方法
     motor.CameraRotate(_cameraRotation);
@@ -62,5 +66,14 @@ public class PlayerContrller : MonoBehaviour
         _jumpDir = Vector3.up * jumpForce;
     }
     motor.Jump(_jumpDir);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="_jointSpring">扭矩力</param>
+    private void SetJointSettings(float _jointSpring)
+    {
+        joint.yDrive = new JointDrive {mode = jointMode, positionSpring = _jointSpring, maximumForce = maximumForce};
     }
 }
