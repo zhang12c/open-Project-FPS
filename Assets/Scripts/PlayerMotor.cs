@@ -47,7 +47,7 @@ public class PlayerMotor : MonoBehaviour
         {
             //cam.transform.Rotate(cameraRotaionX); 
             currentCameraRotationX -= cameraRotaionX;
-            currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -70f, cameraRotationLimit);
+            currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotationLimit, cameraRotationLimit);
             cam.transform.localEulerAngles = new Vector3(currentCameraRotationX,0f,0f);
         }
     }
