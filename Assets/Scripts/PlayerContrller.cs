@@ -63,6 +63,7 @@ public class PlayerContrller : MonoBehaviour
 
     if (Input.GetButton("Jump"))
     {
+        // 一个
         _jumpDir = Vector3.up * jumpForce;
     }
     motor.Jump(_jumpDir);
