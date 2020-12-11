@@ -38,7 +38,7 @@ public class PlayerMotor : MonoBehaviour
     {
         PerformMovement();
         PerformRotation();
-        //PerformCameraRotation();
+        PerformCameraRotation();
     }
 
     private void PerformCameraRotation()

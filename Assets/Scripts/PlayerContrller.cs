@@ -70,7 +70,7 @@ public class PlayerContrller : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// 默认情况下joint的参数设置
     /// </summary>
     /// <param name="_jointSpring">扭矩力</param>
     private void SetJointSettings(float _jointSpring)
