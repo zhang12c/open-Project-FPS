@@ -22828,12 +22828,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 744885988}
   m_PrefabAsset: {fileID: 0}
---- !u!81 &745196457 stripped
-AudioListener:
-  m_CorrespondingSourceObject: {fileID: 5370930867585253824, guid: 30ad70aa3ac365149bb4c527d15870c4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1080191826}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &745748373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34937,95 +34931,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1079683657}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1080191826
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5370930867260663856, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: compentDisable.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663856, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: compentDisable.Array.data[2]
-      value: 
-      objectReference: {fileID: 1789660185}
-    - target: {fileID: 5370930867260663856, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: compentDisable.Array.data[3]
-      value: 
-      objectReference: {fileID: 745196457}
-    - target: {fileID: 5370930867260663859, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_Name
-      value: Character_Cowgirl_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663859, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370930867260663867, guid: 30ad70aa3ac365149bb4c527d15870c4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 30ad70aa3ac365149bb4c527d15870c4, type: 3}
 --- !u!1001 &1081059853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61283,7 +61188,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789660184}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1789660186
 Camera:
   m_ObjectHideFlags: 0

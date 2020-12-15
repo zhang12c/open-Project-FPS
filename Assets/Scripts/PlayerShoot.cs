@@ -9,6 +9,8 @@ public class PlayerShoot : NetworkBehaviour
     [SerializeField] private LayerMask _mask;
 
     public PlayerWeapon _playerWeapon;
+
+    private const string PLAYER_TAG = "Player";
     private void Awake()
     {
         if (cam == null)
@@ -25,14 +27,24 @@ public class PlayerShoot : NetworkBehaviour
             Shoot();
         }
     }
-
+[Client]
     private void Shoot()
     {
         // 存放被击中的目标
         RaycastHit _hit;
         if (Physics.Raycast(cam.transform.position,cam.transform.forward,out _hit,_playerWeapon.range,_mask))
         {
+            if (_hit.collider.tag == PLAYER_TAG)
+            {
+                CmdPlayerShot(_hit.collider.name);
+            }
             Debug.Log(_hit.collider.name);
         }
+    }
+
+    [Command]
+    void CmdPlayerShot(string _ID)
+    {
+        Debug.Log(_ID+"被攻击");
     }
 }
