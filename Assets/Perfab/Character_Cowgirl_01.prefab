@@ -2433,7 +2433,8 @@ MonoBehaviour:
   - {fileID: 5370930867260663868}
   - {fileID: 5370930867260663871}
   - {fileID: -2555706296393008990}
-  - {fileID: -2555706296393008990}
+  - {fileID: 5370930867585253827}
+  - {fileID: 5370930867585253824}
   remoteLayer: RemotePlayer
 --- !u!114 &-2555706296393008990
 MonoBehaviour:
@@ -2469,8 +2470,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 3
   m_SendInterval: 0.1
-  m_SyncRotationAxis: 0
-  m_RotationSyncCompression: 0
+  m_SyncRotationAxis: 4
+  m_RotationSyncCompression: 2
   m_SyncSpin: 0
   m_MovementTheshold: 0.001
   m_VelocityThreshold: 0.0001
@@ -2491,7 +2492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Target: {fileID: 5370930867585253825}
   m_ChildIndex: 0
-  m_SendInterval: 1
+  m_SendInterval: 0.11111111
   m_SyncRotationAxis: 1
   m_RotationSyncCompression: 0
   m_MovementThreshold: 0.001
