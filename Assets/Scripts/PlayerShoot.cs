@@ -46,5 +46,6 @@ public class PlayerShoot : NetworkBehaviour
     void CmdPlayerShot(string _ID)
     {
         Debug.Log(_ID+"被攻击");
+        
     }
 }

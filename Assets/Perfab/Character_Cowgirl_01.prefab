@@ -2433,6 +2433,7 @@ MonoBehaviour:
   - {fileID: 5370930867260663868}
   - {fileID: 5370930867260663871}
   - {fileID: -2555706296393008990}
+  - {fileID: -2555706296393008990}
   remoteLayer: RemotePlayer
 --- !u!114 &-2555706296393008990
 MonoBehaviour:
