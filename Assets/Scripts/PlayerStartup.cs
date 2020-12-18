@@ -1,7 +1,9 @@
 ﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Networking;
 
+[RequireComponent(typeof(Player))]
 public class PlayerStartup : NetworkBehaviour
 {
     [SerializeField]
@@ -16,6 +18,7 @@ public class PlayerStartup : NetworkBehaviour
 
     [SerializeField] private string remoteLayer = "RemotePlayer";
 
+    [SerializeField] private Canvas canvas;
 
     private void Start()
     {
@@ -32,14 +35,15 @@ public class PlayerStartup : NetworkBehaviour
                 sceneCamera.gameObject.SetActive(false);
             }
         }
-        RegisterPlayer();
+        
     }
 
-    private void RegisterPlayer()
+    public override void OnStartClient()
     {
-        // ID 如 ： Player1
-        _ID = "Player" + gameObject.GetComponent<NetworkIdentity>().netId;
-        transform.name = _ID;
+        base.OnStartClient();
+        _ID = gameObject.GetComponent<NetworkIdentity>().netId.ToString();
+        Player _player = GetComponent<Player>();
+        GameManager.RegisterPlayer(_ID,_player);
     }
 
     private void AssignRemote()
@@ -62,5 +66,11 @@ public class PlayerStartup : NetworkBehaviour
         {
             sceneCamera.gameObject.SetActive(true);
         }
+        GameManager.UnRegisterPlayer(transform.name);
+    }
+
+    private void ShowPlayer()
+    {
+        
     }
 }

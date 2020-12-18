@@ -38,7 +38,7 @@ public class PlayerShoot : NetworkBehaviour
             {
                 CmdPlayerShot(_hit.collider.name);
             }
-            Debug.Log(_hit.collider.name);
+            //Debug.Log(_hit.collider.name);
         }
     }
 
@@ -46,6 +46,5 @@ public class PlayerShoot : NetworkBehaviour
     void CmdPlayerShot(string _ID)
     {
         Debug.Log(_ID+"被攻击");
-        
     }
 }
