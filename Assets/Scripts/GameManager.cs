@@ -13,11 +13,17 @@ namespace DefaultNamespace
             string playerID = PLAYER_PREFIX + _netID;
             players.Add(playerID,_player);
             _player.transform.name = playerID;
+            players[playerID].name = playerID;
         }
 
         public static void  UnRegisterPlayer(string _playerID)
         {
             players.Remove(_playerID);
+        }
+
+        public static Dictionary<string, Player> GetPlayers()
+        {
+            return players;
         }
     }
 }

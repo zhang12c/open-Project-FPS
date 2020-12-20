@@ -37,11 +37,11 @@ RectTransform:
   m_Father: {fileID: 1283259425008433}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 250, y: 120}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0, y: 0}
 --- !u!222 &6862326418028513676
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -116,12 +116,12 @@ GameObject:
   - component: {fileID: 1236879786181190007}
   - component: {fileID: 5392540551780799769}
   m_Layer: 5
-  m_Name: Text1
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9120123626731644474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -136,10 +136,10 @@ RectTransform:
   m_Father: {fileID: 1651784015969029957}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -15}
-  m_SizeDelta: {x: 250, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1236879786181190007
 CanvasRenderer:
@@ -2619,6 +2619,7 @@ MonoBehaviour:
   - {fileID: 5370930867585253827}
   - {fileID: 5370930867585253824}
   remoteLayer: RemotePlayer
+  canvas: {fileID: 8621941817626164986}
 --- !u!114 &-2555706296393008990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3572,7 +3573,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 5370930867585253827}
-  m_PlaneDistance: 200
+  m_PlaneDistance: 0.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -3633,7 +3634,7 @@ GameObject:
   - component: {fileID: 2104810039686046407}
   - component: {fileID: 6324034801262652307}
   m_Layer: 5
-  m_Name: Text3
+  m_Name: Player3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3679,7 +3680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.34242615, b: 0.34242615, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3711,7 +3712,7 @@ GameObject:
   - component: {fileID: 8116213394371185410}
   - component: {fileID: 584508105688079087}
   m_Layer: 5
-  m_Name: Text4
+  m_Name: Player4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3757,7 +3758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.34242615, b: 0.34242615, a: 1}
+  m_Color: {r: 1, g: 0.7734498, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3789,7 +3790,7 @@ GameObject:
   - component: {fileID: 7303912073873773884}
   - component: {fileID: 2566045289698884189}
   m_Layer: 5
-  m_Name: Text2
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3835,7 +3836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.34242615, b: 0.34242615, a: 1}
+  m_Color: {r: 0.34117654, g: 0.53586215, b: 0.8980392, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

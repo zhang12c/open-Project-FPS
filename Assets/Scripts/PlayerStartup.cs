@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Player))]
 public class PlayerStartup : NetworkBehaviour
@@ -36,6 +38,7 @@ public class PlayerStartup : NetworkBehaviour
             }
         }
         
+        
     }
 
     public override void OnStartClient()
@@ -69,8 +72,22 @@ public class PlayerStartup : NetworkBehaviour
         GameManager.UnRegisterPlayer(transform.name);
     }
 
+    private void Update()
+    {
+        ShowPlayer();
+    }
+
     private void ShowPlayer()
     {
-        
+        Dictionary<string, Player> _players = GameManager.GetPlayers();
+        int index = 1;
+        foreach (var VARIABLE in _players)
+        {
+            string path = string.Format("BG/Player" + index);
+            canvas.transform.Find(path).gameObject.SetActive(true);
+            Text _text = canvas.transform.Find(path).GetComponent<Text>();
+            _text.text = VARIABLE.Key;
+            index += 1;
+        }
     }
 }
